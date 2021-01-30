@@ -9,4 +9,4 @@ Then you're gonna open the file ''config.yml''.
 And there you can edit the bypass permission for players.
 After you changed the file/permission you can restart your server.
 I recommend using PermissionsEx or LuckPerms if you use a perm plugin, it doesn't realy matter it already works.
-Auto permission: ''bypass.slots''
+Auto permission: ''bypass.slots'' - Prefix and all other changes can be set by your choice.
