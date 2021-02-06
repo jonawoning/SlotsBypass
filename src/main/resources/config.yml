@@ -1,0 +1,29 @@
+#The prefix that will be sent in messages.
+Prefix: '&c&lPrefix &8&l> &7'
+
+#Here you can set if the message will be send or not. -> true/false !
+BypassMessage: true
+
+#The format for the message when the player joins the server.
+Message_Format: '&aYou have succesfully bypassed the slots.'
+
+#The permission for a player to bypass the slots, this permission works only if groups is false.
+BypassPermission: 'bypass.slots'
+
+#This next configuration section is about VIP slots, be carefull with this.
+Groups: true
+
+#The amount of slots a group can bypass, please make this from low to high!
+Vip_Slots: 5
+Vip+_Slots: 10
+Elite_Slots: 15
+Champion_Slots: 20
+Staff_Slots: 25
+
+#The permission for the groups above to bypass.
+Vip_Perm: 'bypass.vip'
+Vip+_Perm: 'bypass.vip+'
+Elite_Perm: 'bypass.elite'
+Champion_Perm: 'bypass.champion'
+Staff_Perm: 'bypass.staff'
+Full_Bypass: 'bypass.admin'
