@@ -1,0 +1,6 @@
+name: SlotsBypass
+version: ${project.version}
+main: nl.snowpix.slotsbypass.SlotsBypass
+api-version: 1.16
+authors: [ Pottenmaker ]
+description: Bypass the slots of your server with a permission.
