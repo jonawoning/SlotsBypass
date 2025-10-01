@@ -7,6 +7,12 @@ bin-release/
 # Other files and folders
 .settings/
 
+# Jetbrains IDEA
+/.idea
+*.iml
+SlotsBypass.iml
+
+
 # Executables
 *.swf
 *.air
