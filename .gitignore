@@ -12,6 +12,9 @@ bin-release/
 *.iml
 SlotsBypass.iml
 
+# Target Maven
+target/
+
 
 # Executables
 *.swf

@@ -14,36 +14,48 @@ public class onJoin implements Listener {
         if (event.getResult() == PlayerLoginEvent.Result.KICK_FULL) {
             Player player = event.getPlayer();
             if (SlotsBypass.instance.Groups){
-                Integer online = Bukkit.getMaxPlayers();
-                Integer players = Bukkit.getOnlinePlayers().size();
-                Integer VIP = SlotsBypass.instance.VIP_Count + online;
-                Integer VIP_Plus = SlotsBypass.instance.VIP_Plus_Count + online;
-                Integer Elite = SlotsBypass.instance.Elite_Count + online;
-                Integer Champion = SlotsBypass.instance.Champion_Count + online;
-                Integer Staff = SlotsBypass.instance.Staff_Count + online;
+                int maxPlayers = Bukkit.getMaxPlayers();
+                int onlinePlayers = Bukkit.getOnlinePlayers().size();
+                int VIP = SlotsBypass.instance.VIP_Count + maxPlayers;
+                int VIP_Plus = SlotsBypass.instance.VIP_Plus_Count + maxPlayers;
+                int Elite = SlotsBypass.instance.Elite_Count + maxPlayers;
+                int Champion = SlotsBypass.instance.Champion_Count + maxPlayers;
+                int Staff = SlotsBypass.instance.Staff_Count + maxPlayers;
 
-                if (players <= VIP){
-                    if (player.hasPermission(SlotsBypass.instance.Vip_Perm))
-                        event.allow();
-                }
-                if (players <= VIP_Plus){
-                    if (player.hasPermission(SlotsBypass.instance.Vip_Plus_Perm))
-                        event.allow();
-                }
-                if (players <= Elite){
-                    if (player.hasPermission(SlotsBypass.instance.Elite_Perm))
-                        event.allow();
-                }
-                if (players <= Champion){
-                    if (player.hasPermission(SlotsBypass.instance.Champion_Perm))
-                        event.allow();
-                }
-                if (players <= Staff){
-                    if (player.hasPermission(SlotsBypass.instance.Staff_Perm))
-                        event.allow();
-                }
-                if (player.hasPermission(SlotsBypass.instance.Admin_Perm))
+                if (player.hasPermission(SlotsBypass.instance.Admin_Perm)){
                     event.allow();
+                    return;
+                }
+
+                if (onlinePlayers <= VIP){
+                    if (player.hasPermission(SlotsBypass.instance.Vip_Perm)){
+                        event.allow();
+                        return;
+                    }
+                }
+                if (onlinePlayers <= VIP_Plus){
+                    if (player.hasPermission(SlotsBypass.instance.Vip_Plus_Perm)){
+                        event.allow();
+                        return;
+                    }
+                }
+                if (onlinePlayers <= Elite){
+                    if (player.hasPermission(SlotsBypass.instance.Elite_Perm)){
+                        event.allow();
+                        return;
+                    }
+                }
+                if (onlinePlayers <= Champion){
+                    if (player.hasPermission(SlotsBypass.instance.Champion_Perm)){
+                        event.allow();
+                        return;
+                    }
+                }
+                if (onlinePlayers <= Staff){
+                    if (player.hasPermission(SlotsBypass.instance.Staff_Perm)){
+                        event.allow();
+                    }
+                }
             }else{
                 if (player.hasPermission(SlotsBypass.instance.BypassPermission)){
                     event.allow();
